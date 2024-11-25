@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased text-gray-800 bg-gray-50;
+  }
+
+  h1, h2, h3 {
+    @apply font-chinese;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .nav-link {
+    @apply text-gray-600 hover:text-black transition-all duration-300 text-lg tracking-wide;
+  }
+
+  .section-title {
+    @apply text-4xl sm:text-5xl md:text-6xl font-chinese mb-6 tracking-wide;
+  }
+
+  .subtitle {
+    @apply text-xl md:text-2xl text-gray-600 font-light tracking-wide;
+  }
+}
+
+.ink-wash-bg {
+  background-color: #f8f9fa;
+  background-image: 
+    radial-gradient(circle at 100% 100%, rgba(0,0,0,0.02) 0%, transparent 50%),
+    radial-gradient(circle at 0% 0%, rgba(0,0,0,0.02) 0%, transparent 50%);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
